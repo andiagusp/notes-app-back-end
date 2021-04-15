@@ -7,21 +7,21 @@
 * notes.js
 
 ### **Hirarki folder**
-node-app-back-end
-|- node_modules
-|- src
-| |- handler.js
-| |- notes.js
-| |- routes.js
-| └─ server.js
-|- .eslintrc.json
-|- package-lock.json
-|- package.json
-└─ README.md
+node-app-back-end  
+|- node_modules  
+|- src  
+| |- handler.js  
+| |- notes.js  
+| |- routes.js  
+| └─ server.js  
+|- .eslintrc.json  
+|- package-lock.json  
+|- package.json  
+└─ README.md  
 
 ---
 link tautan: http://ec2-13-212-153-62.ap-southeast-1.compute.amazonaws.com:8000
-1. Web server dapat menyimpan catatan 
+1. Web server dapat menyimpan catatan  
 	endpoint: **/notes** method **POST**
 
 	*  Struktur object yang disimpan ke server
@@ -80,7 +80,7 @@ link tautan: http://ec2-13-212-153-62.ap-southeast-1.compute.amazonaws.com:8000
 	}
 	```
 
-2. Web server menampilkan catatan
+2. Web server menampilkan catatan  
 	endpoint: **/notes** method **GET**
 
 	* Ketika client melakukan permintaan pada path **/notes** dengan method **GET**, maka server harus mengembalikan status code **200 (ok)** serta seluruh data notes dalam bentuk array menggunakan JSON. Contohnya seperti ini:
@@ -154,7 +154,7 @@ link tautan: http://ec2-13-212-153-62.ap-southeast-1.compute.amazonaws.com:8000
 	}
 	```
 
-3. Web Server dapat mengubah catatan
+3. Web Server dapat mengubah catatan  
 	endpoint: **/notes/{id}** method **PUT**
 
 	* Kriteria ketiga adalah web server harus dapat mengubah catatan. Perubahan yang dimaksud bisa berupa judul, isi, ataupun tag catatan. Ketika client meminta perubahan catatan, ia akan membuat permintaan ke path **/notes/{id}**, menggunakan method **PUT**, serta membawa data JSON pada body request yang merupakan data catatan terbaru.
@@ -186,7 +186,7 @@ link tautan: http://ec2-13-212-153-62.ap-southeast-1.compute.amazonaws.com:8000
 	}
 	```
 
-4. Web Server dapat menghapus catatan
+4. Web Server dapat menghapus catatan  
 	endpoint: **/notes/{id}** method **DELETE**
 
 	* Kriteria terakhir adalah web server harus bisa menghapus catatan. Untuk menghapus catatan, client akan membuat permintaan pada path **/notes/{id}** dengan method **DELETE**. Ketika permintaan tersebut berhasil, maka server harus mengembalikan status code **200 (ok)** serta data JSON berikut:
